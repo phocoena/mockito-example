@@ -3,7 +3,7 @@
 
 just code fragments to demonstrate two usecases for mockito: 
   1) mock an int method returning random ints
-  2) mock for a void method returning random ints by manipulating a data transfer container object given by parameter
+  2) mock a void method returning random ints by manipulating a data transfer container object given by parameter
 
 see junit test class 
   de.phocoena.examples.mockito.MyApplicationLogicTest
