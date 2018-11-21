@@ -14,3 +14,6 @@ when i tried this i used netbeans, java openjdk 1.8 and the following libraries
   - junit-4.12.jar  
   - mockito-core-2.23.2.jar  
   - objenesis-3.0.1.jar
+
+## License
+This work is published under MIT license
