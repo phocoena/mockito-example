@@ -9,7 +9,7 @@ see junit test class:
   - de.phocoena.examples.mockito.MyApplicationLogicTest
 
 ## Requirements
-To build and run project following in required:
+To build and run project following is required:
 - (open)jdk 1.8
 - maven
 
