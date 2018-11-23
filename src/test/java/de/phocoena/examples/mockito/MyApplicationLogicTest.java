@@ -61,18 +61,18 @@ public class MyApplicationLogicTest {
     }
 
     @Test
-    public void testsWithChangingApplicationDataFunction() {
+    public void testsWithChangingDataDeveliveredByFunction() {
         when(myApplicationDataMockInstance.getSensorDataFunction()).thenReturn(1,10,100,0);
         engine = new MyApplicationLogic( 1, 2, myApplicationDataMockInstance);
         engine.setTolerance(1, 10);
-        assertEquals("testsWithChangingApplicationData 1 1 10",    engine.isSensorDataWithinToleranceWithFunctionCall(), true);
-        assertEquals("testsWithChangingApplicationData 1 10 10",   engine.isSensorDataWithinToleranceWithFunctionCall(), true);
-        assertEquals("testsWithChangingApplicationData 1 1000 10", engine.isSensorDataWithinToleranceWithFunctionCall(), false);
-        assertEquals("testsWithChangingApplicationData 1 0 10",    engine.isSensorDataWithinToleranceWithFunctionCall(), false);
+        assertTrue("testsWithChangingApplicationData 1 1 10",    engine.isSensorDataDeveliveredByFunctionWithinTolerance());
+        assertTrue("testsWithChangingApplicationData 1 10 10",   engine.isSensorDataDeveliveredByFunctionWithinTolerance());
+        assertFalse("testsWithChangingApplicationData 1 1000 10", engine.isSensorDataDeveliveredByFunctionWithinTolerance());
+        assertFalse("testsWithChangingApplicationData 1 0 10",    engine.isSensorDataDeveliveredByFunctionWithinTolerance());
     }
     
     @Test
-    public void testsWithChangingApplicationDataProcedure() {
+    public void testsWithChangingDataDeveliveredByProcedure() {
       
         List<Integer> myList = new ArrayList<>();
         myList.add(1);
@@ -93,10 +93,10 @@ public class MyApplicationLogicTest {
         engine = new MyApplicationLogic( 1, 2, myApplicationDataMockInstance);
         engine.setTolerance(1, 11);
         
-        assertEquals("testsWithChangingApplicationData 1 1 1", engine.isSensorDataWithinToleranceWithProcedureCall(), true);
-        assertEquals("testsWithChangingApplicationData 1 10 10", engine.isSensorDataWithinToleranceWithProcedureCall(), true);
-        assertEquals("testsWithChangingApplicationData 1 100 10", engine.isSensorDataWithinToleranceWithProcedureCall(), false);
-        assertEquals("testsWithChangingApplicationData 1 0 10", engine.isSensorDataWithinToleranceWithProcedureCall(), false);
+        assertTrue("testsWithChangingApplicationData 1 1 1", engine.isSensorDataDeveliveredByProcedureWithinTolerance());
+        assertTrue("testsWithChangingApplicationData 1 10 10", engine.isSensorDataDeveliveredByProcedureWithinTolerance());
+        assertFalse("testsWithChangingApplicationData 1 100 10", engine.isSensorDataDeveliveredByProcedureWithinTolerance());
+        assertFalse("testsWithChangingApplicationData 1 0 10", engine.isSensorDataDeveliveredByProcedureWithinTolerance());
         
     }
     
