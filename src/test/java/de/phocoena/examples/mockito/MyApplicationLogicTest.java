@@ -82,6 +82,7 @@ public class MyApplicationLogicTest {
         doAnswer((Answer<Object>) (InvocationOnMock invocation) -> {
           Object[] args = invocation.getArguments();
           if( myList.isEmpty()) {
+            //running out of stacked test data - always return 0
             ((MyApplicationValueContainer)args[0]).setValue(0);
             return null;
           }
