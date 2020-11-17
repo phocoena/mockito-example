@@ -61,7 +61,7 @@ public class MyApplicationLogicTest {
     }
 
     @Test
-    public void testsWithChangingDataDeveliveredByFunction() {
+    public void testsWithChangingDataDeliveredByFunction() {
         when(myApplicationDataMockInstance.getSensorDataFunction()).thenReturn(1,10,100,0);
         engine = new MyApplicationLogic( 1, 2, myApplicationDataMockInstance);
         engine.setTolerance(1, 10);
@@ -72,7 +72,7 @@ public class MyApplicationLogicTest {
     }
     
     @Test
-    public void testsWithChangingDataDeveliveredByProcedure() {
+    public void testsWithChangingDataDeliveredByProcedure() {
       
         List<Integer> myList = new ArrayList<>();
         myList.add(1);
