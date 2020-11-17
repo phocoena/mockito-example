@@ -64,23 +64,23 @@ public class MyApplicationLogic {
         return value >= lowerBound && value <= upperBound;
     }
 
-    public boolean isConstantDataDeveliveredByFunctionWithinTolerance() {
+    public boolean isConstantDataDeliveredByFunctionWithinTolerance() {
         int value = myApplicationDataInstance.getConstantDataFunction();
         return isWithinTolerance(value);
     }
     
-    public boolean  isSensorDataDeveliveredByFunctionWithinTolerance() {
+    public boolean  isSensorDataDeliveredByFunctionWithinTolerance() {
         int value = myApplicationDataInstance.getSensorDataFunction();
         return isWithinTolerance(value);
     }   
 
-    public boolean isConstantDataDeveliveredByProcedureWithinTolerance() {
+    public boolean isConstantDataDeliveredByProcedureWithinTolerance() {
         MyApplicationValueContainer myValueContainer = new MyApplicationValueContainer(0);
         myApplicationDataInstance.getConstantDataProcedure( myValueContainer);
         return isWithinTolerance(myValueContainer.getValue());
     }
     
-    public boolean isSensorDataDeveliveredByProcedureWithinTolerance() {
+    public boolean isSensorDataDeliveredByProcedureWithinTolerance() {
         MyApplicationValueContainer myValueContainer = new MyApplicationValueContainer(0);
         myApplicationDataInstance.getSensorDataProcedure( myValueContainer);
         return isWithinTolerance(myValueContainer.getValue());
